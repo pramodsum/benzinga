@@ -1,0 +1,31 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/DarkBlue</item>
+	</style>
+
+    <style name="MyTabBar" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar">
+        <item name="android:background">@color/DarkBlue</item>
+	</style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <color name="LightBlue">#0A5E82</color>
+    <color name="DarkBlue">#014C6B</color>
+    <color name="Orange">#e09010</color>
+    <color name="LightOrange">#f0c020</color>
+    <color name="White">#ffffff</color>
+    <color name="Blue">#045371</color>
+
+</resources>

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/story_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    <!-- Rightend Arrow -->
+    <ImageView
+        android:id="@+id/see_more_arrow"
+        android:contentDescription="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/navigation_next_item" />
+    <!-- City-->
+    <TextView
+        android:id="@+id/story_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dip"
+        android:layout_centerVertical="true"
+        android:paddingBottom ="10dip"
+        android:textColor="#040404"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+    <!-- Weather Information-->
+    <TextView
+        android:id="@+id/story_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/story_title"
+        android:layout_alignLeft="@+id/story_title"
+        android:paddingTop="5dip"
+        android:layout_centerHorizontal="true"
+        android:textColor="#343434"
+        android:textSize="15sp" />
+</RelativeLayout>  
