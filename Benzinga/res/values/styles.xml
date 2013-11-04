@@ -1,24 +1,67 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@color/DarkBlue</item>
-	</style>
+    <style name="ActionBar.Solid.Benzinga" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_benzinga</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_benzinga</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_benzinga</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Benzinga</item>
+    </style>
 
-    <style name="MyTabBar" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar">
-        <item name="android:background">@color/DarkBlue</item>
-	</style>
+    <style name="ActionBar.Transparent.Benzinga" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_benzinga</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Benzinga</item>
+    </style>
+
+    <style name="PopupMenu.Benzinga" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_benzinga</item>	
+    </style>
+
+    <style name="DropDownListView.Benzinga" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_benzinga</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Benzinga" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_benzinga</item>
+    </style>
+
+    <style name="DropDownNav.Benzinga" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_benzinga</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_benzinga</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_benzinga</item>
+    </style>
+    
+    <style name="ProgressBar.Benzinga" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_benzinga</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Benzinga" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_benzinga</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Benzinga.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Benzinga</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Benzinga</item>
+    </style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_benzinga</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Benzinga</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Benzinga</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Benzinga</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Benzinga</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Benzinga</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_benzinga</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_benzinga</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Benzinga</item>
     </style>
     
     <color name="LightBlue">#0A5E82</color>
@@ -27,5 +70,9 @@
     <color name="LightOrange">#f0c020</color>
     <color name="White">#ffffff</color>
     <color name="Blue">#045371</color>
+    <color name="Grey">#C0C0C0</color>
+    <color name="DarkGrey">#A0A0A0</color>
+    <color name="Green">#009933</color>
+    <color name="Red">#FF0033</color>
 
 </resources>

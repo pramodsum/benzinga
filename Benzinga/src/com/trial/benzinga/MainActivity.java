@@ -6,6 +6,8 @@ import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,7 +22,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		if(savedInstanceState == null) {
+			setContentView(R.layout.activity_main);
+		}
+	    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
 		actionBar = getActionBar();
 	    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -28,7 +33,7 @@ public class MainActivity extends Activity {
 	    		R.color.DarkBlue)));
 	    actionBar.setStackedBackgroundDrawable(new ColorDrawable(getResources().getColor(
 	    		R.color.LightBlue)));
-	    actionBar.setDisplayShowTitleEnabled(false);
+	    actionBar.setDisplayShowTitleEnabled(true);
 		addTabs();
 		actionBar.show(); 
 	}

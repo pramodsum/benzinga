@@ -6,7 +6,7 @@
     android:padding="5dip" >
 
     <ListView
-        android:id="@+id/watchlist_list"
+        android:id="@+id/watchlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     </ListView>
