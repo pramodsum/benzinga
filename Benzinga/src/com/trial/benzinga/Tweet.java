@@ -1,9 +1,14 @@
 package com.trial.benzinga;
-
+/** Tweet class to encapsulate all trending tweet related information
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class Tweet { 
 	public String author, username, text, time, url;
 	
-	Tweet(int i) {
+	/** Constructor used each time a new trending tweet is created
+	 */
+	Tweet() {
 		author = "Sumedha Pramod";
 		username = "@" + "pramodsum";
 		text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +

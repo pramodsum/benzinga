@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
+/**
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 @SuppressLint("ValidFragment")
 public class TweetDialogFragment extends DialogFragment {
 	int pos;

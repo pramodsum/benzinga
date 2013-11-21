@@ -1,8 +1,15 @@
 package com.trial.benzinga;
 
+/** Story class to encapsulate all new story related information
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class Story { 
 	public String title, author, text, snippet, time, date;
 	
+	/** Constructor used each time a new news story is created
+	 * @param i Index for story in news list
+	 */
 	Story(int i) {
 		title = "Story " + Integer.toString(i);
 		author = "Author Name";

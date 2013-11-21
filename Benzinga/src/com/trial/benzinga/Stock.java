@@ -1,9 +1,15 @@
 package com.trial.benzinga;
 
+/** Stock class to encapsulate all stock-related information
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class Stock { 
 	public String stock_name, company, price, dollar_change, percent_change;
 	
-	Stock(int i) {
+	/** Constructor used each time a new stock is created
+	 */
+	Stock() {
 		stock_name = "AAPL";
 		company = "Apple Inc.";
 		price = "$523.39";

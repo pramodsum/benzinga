@@ -13,7 +13,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
+/**
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class TrendingFragment extends Fragment implements View.OnClickListener  {
 	public static String TAG="DirectionsFragment";
 	private String[] list_items = new String[11];
@@ -72,7 +75,7 @@ public class TrendingFragment extends Fragment implements View.OnClickListener  
 	private void addTweets() {
 		list = new ArrayList<Tweet>();
 	    for (int i = 0; i < list_items.length; ++i) {
-	    	list.add(new Tweet(i));
+	    	list.add(new Tweet());
 	    }
 	}
 

@@ -2,31 +2,28 @@ package com.trial.benzinga;
 
 import java.util.ArrayList;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/** NewsFragment tab for displaying all the most current news articles pulled from the Benzinga API
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class NewsFragment extends Fragment implements View.OnClickListener {
 	public static String TAG="DirectionsFragment";
 	private String[] list_items = new String[10];
 	public static ArrayList<Story> list;
 	ListView lView1;
 	
-	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 			Bundle savedInstanceState) {
 	    View view = inflater.inflate(R.layout.news_layout, container, false);
@@ -81,9 +78,5 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
 	    }
 	}
 	
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
-	};
+	public void onClick(View v) { };
 }

@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
+/**
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class WatchlistFragment extends Fragment {
 	public static String TAG="DirectionsFragment";
 	private String[] list_items = new String[11];
@@ -65,7 +68,7 @@ public class WatchlistFragment extends Fragment {
 	private void addStocks() {
 		list = new ArrayList<Stock>();
 	    for (int i = 0; i < list_items.length; ++i) {
-	    	list.add(new Stock(i));
+	    	list.add(new Stock());
 	    }
 	}
 }

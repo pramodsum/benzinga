@@ -6,6 +6,10 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 
+/** Allows user to change between tabs in the MainActivity
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class TabListener<T extends Fragment> implements ActionBar.TabListener {
     private Fragment mFragment;
     private final Activity mActivity;

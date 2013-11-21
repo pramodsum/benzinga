@@ -1,7 +1,6 @@
 package com.trial.benzinga;
 
 import android.os.Bundle;
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
@@ -12,7 +11,10 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.TabHost;
-
+/**
+ * @author: Sumedha Pramod
+ * @version: 0.1
+ */
 public class MainActivity extends Activity implements 
 		StoryDialogFragment.NoticeDialogListener,
 		TweetDialogFragment.NoticeDialogListener {
@@ -20,15 +22,19 @@ public class MainActivity extends Activity implements
 	public static ActionBar actionBar;
 	public static Context context;
 
-	@SuppressLint("NewApi")
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if(savedInstanceState == null) {
 			setContentView(R.layout.activity_main);
 		}
 	    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		
+	    create_actionbar();
+	}
+	
+	/**
+	 * Create action bar at top of screen and set color scheme
+	 */
+	private void create_actionbar() {
 		actionBar = getActionBar();
 	    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 	    actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(
@@ -47,6 +53,9 @@ public class MainActivity extends Activity implements
 	    return super.onCreateOptionsMenu(menu);
 	}
 	
+	/**
+	 * Create Watchlist, News, and Trending tabs
+	 */
 	private void addTabs() {
 	    Tab tab = actionBar.newTab()
 	                       .setText("Watchlist")
@@ -67,9 +76,5 @@ public class MainActivity extends Activity implements
 	    actionBar.addTab(tab);
     }
 
-	@Override
-	public void onDialogNegativeClick(DialogFragment dialog) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void onDialogNegativeClick(DialogFragment dialog) {}
 }
