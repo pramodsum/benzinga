@@ -2,9 +2,6 @@ package com.trial.benzinga;
 
 import java.util.ArrayList;
 
-import com.trial.benzinga.TrendingFragment.MySimpleArrayAdapter;
-import com.trial.benzinga.TrendingFragment.Tweet;
-
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -71,16 +68,4 @@ public class WatchlistFragment extends Fragment {
 	    	list.add(new Stock(i));
 	    }
 	}
-	
-	public class Stock { 
-		public String stock_name, company, price, dollar_change, percent_change;
-		
-		Stock(int i) {
-			stock_name = "AAPL";
-			company = "Apple Inc.";
-			price = "$523.39";
-			dollar_change = "+2.15";
-			percent_change = "(+0.41%)";
-		}
-	};
 }

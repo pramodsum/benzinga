@@ -5,15 +5,17 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.TabHost;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements 
+		StoryDialogFragment.NoticeDialogListener,
+		TweetDialogFragment.NoticeDialogListener {
 	public static TabHost tabHost;
 	public static ActionBar actionBar;
 	public static Context context;
@@ -64,4 +66,10 @@ public class MainActivity extends Activity {
                         this, "Trending", TrendingFragment.class));
 	    actionBar.addTab(tab);
     }
+
+	@Override
+	public void onDialogNegativeClick(DialogFragment dialog) {
+		// TODO Auto-generated method stub
+		
+	}
 }
