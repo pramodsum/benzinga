@@ -48,10 +48,10 @@ public class TweetDialogFragment extends DialogFragment {
 		final LayoutInflater inflater = (getActivity()).getLayoutInflater();
 		final View view = inflater.inflate(R.layout.tweet_detail, null);
 		
-		TextView username = (TextView) view.findViewById(R.id.tweet_detail_username);
-		TextView author = (TextView) view.findViewById(R.id.tweet_detail_author);
-	    TextView text = (TextView) view.findViewById(R.id.tweet_detail_text);
-	    TextView time = (TextView) view.findViewById(R.id.tweet_detail_time);
+		TextView username = (TextView) view.findViewById(R.id.tweet_username);
+		TextView author = (TextView) view.findViewById(R.id.tweet_name);
+	    TextView text = (TextView) view.findViewById(R.id.tweet_text);
+	    TextView time = (TextView) view.findViewById(R.id.time_since_tweet);
 //	    ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
 	    username.setText(TrendingFragment.list.get(pos).username);
 	    author.setText(TrendingFragment.list.get(pos).author);

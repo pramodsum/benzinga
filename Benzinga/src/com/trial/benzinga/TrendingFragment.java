@@ -60,7 +60,7 @@ public class TrendingFragment extends Fragment implements View.OnClickListener  
 	        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	    View rowView = inflater.inflate(R.layout.tweet, parent, false);
 	    TextView author = (TextView) rowView.findViewById(R.id.tweet_name);
-	    TextView username = (TextView) rowView.findViewById(R.id.twitter_username);
+	    TextView username = (TextView) rowView.findViewById(R.id.tweet_name);
 	    TextView time = (TextView) rowView.findViewById(R.id.time_since_tweet);
 	    TextView text = (TextView) rowView.findViewById(R.id.tweet_text);
 //	    ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
